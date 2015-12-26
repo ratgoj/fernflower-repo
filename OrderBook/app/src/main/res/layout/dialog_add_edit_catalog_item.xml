@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/ci_general_dialog_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:id="@+id/ci_edit_text_layout"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.95"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ci_eh_item_code"
+                android:id="@+id/ci_dialog_item_code"
+                android:foregroundGravity="center"
+                android:inputType="number"
+                android:gravity="right"
+                android:ellipsize="start"
+                android:enabled="false" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ci_dialog_item_name"
+                android:hint="@string/ci_eh_item_name"
+                android:inputType="text"
+                android:gravity="center_horizontal"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ci_dialog_item_price"
+                android:hint="@string/ci_eh_item_price"
+                android:inputType="numberDecimal"
+                android:gravity="right"
+                android:ellipsize="start"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ci_dialog_item_describe"
+                android:hint="@string/ci_eh_item_describe"
+                android:gravity="center_horizontal"
+                android:inputType="textMultiLine"
+                android:lines="3"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ci_dialog_microphone_button"
+            android:src="@drawable/dialog_microphone_button"
+            android:contentDescription="@string/microphone_description"
+            android:background="@color/transparent"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ci_dialog_cancel_button"
+        android:src="@drawable/dialog_cancel_button"
+        android:background="@color/transparent"
+        android:layout_marginLeft="75dp"
+        android:contentDescription="@string/txt_cancel_button"
+        android:layout_below="@+id/ci_general_dialog_layout"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ci_dialog_ok_button"
+        android:src="@drawable/dialog_ok_button"
+        android:contentDescription="@string/txt_ok_button"
+        android:background="@color/transparent"
+        android:layout_marginEnd="75dp"
+        android:layout_below="@+id/ci_general_dialog_layout"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

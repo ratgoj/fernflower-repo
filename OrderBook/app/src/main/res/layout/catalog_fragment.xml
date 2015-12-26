@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/catalog_search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <SearchView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/catalog_search_item_name"
+            android:background="@color/order_list_back_bg"
+            android:queryHint="@string/eh_enter_item_name"
+            android:iconifiedByDefault="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/catalog_item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/catalog_search_layout"
+        android:layout_above="@+id/order_commercial">
+
+        <com.fernflower.orderbook.SwipeListView.SwipeListView
+            android:id="@+id/swipe_catalog_items"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="#ffffffff"
+            swipe:swipeFrontView="@+id/front"
+            swipe:swipeBackView="@+id/back"
+            swipe:swipeActionLeft="reveal"
+            swipe:swipeActionRight="reveal"
+            swipe:swipeDrawableChecked="@drawable/choice_selected"
+            swipe:swipeDrawableUnchecked="@drawable/choice_unselected"
+            swipe:swipeCloseAllItemsWhenMoveList="true"
+            swipe:swipeMode="both">
+
+        </com.fernflower.orderbook.SwipeListView.SwipeListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order_commercial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/commerce_bg"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom|center_horizontal"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/commerce_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commerce"
+            android:textSize="44sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

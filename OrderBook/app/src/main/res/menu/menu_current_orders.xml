@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.fernflower.orderbook.fragments.CurrentOrdersFragment">
+
+    <item
+        android:id="@+id/current_orders_add_order"
+        android:icon="@mipmap/ic_add_list"
+        android:orderInCategory="10"
+        android:title="@string/menu_co_add_order"
+        android:menuCategory="secondary"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/current_orders_sort_priority"
+        android:icon="@mipmap/ic_sort_priority"
+        android:title="@string/menu_co_sort_priority"
+        android:orderInCategory="11"
+        android:menuCategory="secondary"
+        app:showAsAction="always"/>
+
+</menu>

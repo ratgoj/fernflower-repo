@@ -1,0 +1,109 @@
+<resources>
+    <!--Strings without translation-->
+    <string name="app_name">Order Book</string>
+
+    <string name="splash_name_img">Order book</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">OrderNameListActivity</string>
+
+    <string name="microphone_description">Microphone</string>
+    <string name="pr_high">High</string>
+    <string name="pr_medium">Medium</string>
+    <string name="pr_low">Low</string>
+
+    <string name="number_zero">0</string>
+    <string name="number_one">1</string>
+    <string name="code_hint_zero">000000</string>
+    <string name="percent_sign">%</string>
+    <string name="npp">№</string>
+    
+    <!--Strings what need translate-->
+    <string name="menu">Menu</string>
+    <string name="menu_co_add_order">Add order</string>
+    <string name="menu_co_sort_priority">Sort by priority</string>
+
+    <string name="menu_catalog_add_item">Add Item</string>
+
+
+    <string-array name="main_menu_names_array">
+        <item>Current orders</item>
+        <item>Catalog</item>
+        <item>Completed orders</item>
+        <item>Templates</item>
+        <item>Statistic</item>
+        <item>Help</item>
+    </string-array>
+
+
+    <string name="current_orders">Current orders</string>
+    <string name="catalog">Catalog</string>
+    <string name="completed_orders">Completed orders</string>
+    <string name="templates">Templates</string>
+    <string name="statistic">Statistic</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+
+    <!--Add New Order Dialog-->
+    <string name="add_order_dialog_title">Add a new order</string>
+    <string name="rg_title_priority">Set the priority</string>
+
+    <string name="priority_high">High</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_highest">Highest</string>
+
+    <string name="txt_enter_end_date">Date of execution of the order</string>
+    <string name="txt_ok_button">Ok</string>
+    <string name="txt_cancel_button">Cancel</string>
+    <string name="txt_total_price">Total price: </string>
+    <!--END>Add New Order Dialog-->
+
+    <!--Catalog-->
+    <string name="add_ietem_to_order">Add item to order</string>
+    <!--END CATALOG-->
+    
+    <!--EditOrder-->
+    <string name="currency_sign">$</string>
+    <string name="header_item_name">Item name</string>
+    <string name="header_item_amount">Amount</string>
+    <string name="header_item_discount">Discount</string>
+    <string name="header_item_price">Price</string>
+    <string name="find_by_code">Find item by code</string>
+    <string name="search_by_code">Search by code</string>
+    <!--END EditOrder -->
+
+    <!--EditTexts Hints-->
+    <string name="eh_enter_order_name">Name of the order.</string>
+    <string name="eh_enter_customer_name">Name of the customer.</string>
+
+    <string name="eh_enter_item_name">Type name of item</string>
+
+    <string name="ci_eh_item_code">Item code</string>
+    <string name="ci_eh_item_name">Input name of item</string>
+    <string name="ci_eh_item_price">Item price</string>
+    <string name="ci_eh_item_describe">Short describe of item</string>
+
+    <!--Toast Hint-->
+    <string name="no_voice">I don\'t hear you</string>
+    <string name="voice_no_choose_input">Please choose input and try again</string>
+    <string name="no_listname_no_customername">You have not entered Order name or Customer name</string>
+    <string name="no_data_from_inputs">Please, fill all input field.</string>
+    <!--Error Message -->
+    <string name="error_no_tables">Sorry.Can\'t found any tables, tableList.isEmpty()=true. Check DbLayer in - addTablesToList()</string>
+    <string name="error_table_not_found">Sorry.Can\'t found this table. Check if Table Classes was initialized in addTablesToList()?</string>
+    <string name="error_voice_not_supported">Sorry.Yours device couldn\'t support voice input, or internet disconnected </string>
+
+    <!--Temp Strings -->
+    <string name="row_orders_name">Order name</string>
+    <string name="row_customers_name">Customer name</string>
+    <string name="row_date_of_creation">12.09.2015</string>
+    <string name="row_date_of_end">15.09.2015</string>
+    <string name="row_catalog_item_name">Item Name</string>
+
+</resources>

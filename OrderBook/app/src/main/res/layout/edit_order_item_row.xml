@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:stretchColumns="*">
+
+    <TableRow>
+    <TextView
+        android:id="@+id/eoir_number"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/number_one" />
+
+    <TextView
+        android:id="@+id/eoir_item_name"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/row_catalog_item_name"
+         />
+
+
+    <EditText
+        android:id="@+id/eoir_item_amount"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/number_one"
+        android:textSize="14sp"
+        android:inputType="number"
+        android:gravity="right" />
+
+    <EditText
+        android:id="@+id/eoir_item_discount"
+        android:layout_width="23dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:hint="@string/number_zero"
+        android:gravity="right" />
+
+    <TextView
+        android:id="@+id/eoir_percent_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/percent_sign"
+         />
+
+    <TextView
+        android:id="@+id/eoir_item_price"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/number_one"
+        android:gravity="right" />
+
+    <TextView
+        android:id="@+id/eoir_currency_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/currency_sign"
+        />
+    </TableRow>
+</TableLayout>

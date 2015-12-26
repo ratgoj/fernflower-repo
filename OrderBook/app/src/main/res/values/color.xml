@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="dark_grey">#ff555555</color>
+    <color name="light_gray">#ffeeeeee</color>
+
+    <color name="order_list_back_bg">#ffffffbb</color>
+    <!--Temp Color-->
+    <color name="list_background">#33ffffff</color>
+    <color name="list_background_pressed">#ccc</color>
+    <color name="drawer_item_color">#fff</color>
+    <color name="list_divider">#5e5e5e</color>
+    <color name="commerce_bg">#00aaff</color>
+
+</resources>

@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.fernflower.orderbook.activitys.OrderNameListActivity">
+    <item
+        android:id="@+id/icon_settings"
+        android:icon="@mipmap/ic_settings"
+        android:orderInCategory="20"
+        android:title="@string/action_settings"
+        android:menuCategory="system"
+        app:showAsAction="always" >
+
+        <menu>
+            <item
+                android:id="@+id/action_settings"
+                android:menuCategory="secondary"
+                android:icon="@mipmap/ic_action_settings"
+                android:orderInCategory="21"
+                android:title="@string/action_settings"
+                app:showAsAction="ifRoom|withText"
+                />
+        </menu>
+    </item>
+
+</menu>

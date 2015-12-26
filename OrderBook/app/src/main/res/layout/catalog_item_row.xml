@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:tag="back"
+        android:background="@color/order_list_back_bg"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/ci_swipe_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/edit_button"
+            android:background="@color/transparent"
+            android:contentDescription="@string/edit"
+            android:layout_marginRight="10dp" />
+
+        <ImageButton
+            android:id="@+id/ci_swipe_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/delete_button"
+            android:background="@color/transparent"
+            android:contentDescription="@string/delete"
+            android:layout_marginLeft="10dp" />
+
+        <ImageButton
+            android:id="@+id/ci_swipe_add_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_add_item"
+            android:background="@color/transparent"
+            android:contentDescription="@string/add_ietem_to_order"
+            android:layout_marginLeft="25dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:tag="front"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/ci_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/code_hint_zero"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/ci_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/row_catalog_item_name"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignTop="@+id/ci_code"
+            android:layout_toEndOf="@+id/ci_code" />
+
+        <TextView
+            android:id="@+id/ci_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/code_hint_zero"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignTop="@+id/ci_name"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</FrameLayout>

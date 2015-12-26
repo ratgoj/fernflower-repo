@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.fernflower.orderbook.fragments.CatalogFragment">
+
+    <item
+        android:id="@+id/catalog_add_item"
+        android:icon="@mipmap/ic_add_list"
+        android:orderInCategory="10"
+        android:title="@string/menu_catalog_add_item"
+        android:menuCategory="secondary"
+        app:showAsAction="always" />
+
+</menu>
