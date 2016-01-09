@@ -38,7 +38,7 @@
         android:id="@+id/eoir_item_discount"
         android:layout_width="23dp"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:textSize="14sp"
         android:hint="@string/number_zero"
         android:gravity="right" />

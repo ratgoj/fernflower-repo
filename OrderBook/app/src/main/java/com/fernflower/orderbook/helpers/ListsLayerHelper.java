@@ -29,18 +29,18 @@ public class ListsLayerHelper {
     private ArrayList<OrderItem> orderListItems = new ArrayList<>();
     private HashMap<String, ArrayList<OrderItem>> allOrders = new HashMap<>();
 
-    private ListsLayerHelper(){
+    private ListsLayerHelper() {
         tempAddOrders();
         tempAddCatalogItems();
+        tempAddEditOrderItem();
     }
 
     public static ListsLayerHelper getInstance() {
-        if(instance==null){
+        if (instance == null) {
             instance = new ListsLayerHelper();
         }
         return instance;
     }
-
 
 
     public ArrayList<OrderListInfo> getCurrentOrders() {
@@ -49,7 +49,7 @@ public class ListsLayerHelper {
 
     public void setCurrentOrders(ArrayList<OrderListInfo> currentOrders) {
         this.currentOrders = currentOrders;
-        System.out.println("Layer Array: "+this.currentOrders);
+        System.out.println("Layer Array: " + this.currentOrders);
     }
 
     public ArrayList<CatalogItem> getCatalogItems() {
@@ -62,7 +62,7 @@ public class ListsLayerHelper {
 
 
     //Перевод Dp в пиксели, для SwipeView
-    public int convertDpToPixel(Context context,float dp) {
+    public int convertDpToPixel(Context context, float dp) {
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         float px = dp * (metrics.densityDpi / 160f);
         return (int) px;
@@ -92,42 +92,50 @@ public class ListsLayerHelper {
         this.orderListItems = orderListItems;
     }
 
-    public void setItemsToOrder(String orderName, ArrayList<OrderItem> itemsData){
+    public void setItemsToOrder(String orderName, ArrayList<OrderItem> itemsData) {
         allOrders.put(orderName, itemsData);
     }
 
-    public void setCurrentDataToOrder(){
+    public void setCurrentDataToOrder() {
         setItemsToOrder(currentOrderName, orderListItems);
     }
 
-    public ArrayList<OrderItem> getOrderItems(String orderName){
+    public ArrayList<OrderItem> getOrderItems(String orderName) {
         return allOrders.get(orderName);
     }
 
-    private void tempAddOrders(){
-        long createTime=DateHelper.getInstance().getCurrentDateInMillis();
+    private void tempAddOrders() {
+        long createTime = DateHelper.getInstance().getCurrentDateInMillis();
         //order = new OrderListInfo(Priority.Low, "First Order", "Paul", createTime, createTime+1000000, 0);
-        this.currentOrders.add(new OrderListInfo(Priority.Low, "First Order", "Paul", createTime, createTime+1000000, 0));
+        this.currentOrders.add(new OrderListInfo(Priority.Low, "First Order", "Paul", createTime, createTime + 1000000, 0));
         //order = new OrderListInfo(Priority.Medium, "Second Order", "Jack", createTime, createTime+2000000, 0);
-        this.currentOrders.add(new OrderListInfo(Priority.Medium, "Second Order", "Jack", createTime, createTime+2000000, 0));
+        this.currentOrders.add(new OrderListInfo(Priority.Medium, "Second Order", "Jack", createTime, createTime + 2000000, 0));
         //order = new OrderListInfo(Priority.High, "Third Order", "Mike", createTime, createTime, 0);
         this.currentOrders.add(new OrderListInfo(Priority.High, "Third Order", "Mike", createTime, createTime, 0));
 
-        order = new OrderListInfo(Priority.Low, "4 Order", "Klara", createTime, createTime-10000000, 0);
+        order = new OrderListInfo(Priority.Low, "4 Order", "Klara", createTime, createTime - 10000000, 0);
         this.currentOrders.add(order);
-        order = new OrderListInfo(Priority.Medium, "5 Order", "Andy", createTime, createTime-20000000, 0);
+        order = new OrderListInfo(Priority.Medium, "5 Order", "Andy", createTime, createTime - 20000000, 0);
         this.currentOrders.add(order);
-        order = new OrderListInfo(Priority.Low, "6 Order", "Mishel", createTime, createTime-20000000, 0);
+        order = new OrderListInfo(Priority.Low, "6 Order", "Mishel", createTime, createTime - 20000000, 0);
         this.currentOrders.add(order);
-        order = new OrderListInfo(Priority.Low, "7 Order", "April", createTime, createTime-20000000, 0);
+        order = new OrderListInfo(Priority.Low, "7 Order", "April", createTime, createTime - 20000000, 0);
         this.currentOrders.add(order);
     }
 
-    private void tempAddCatalogItems(){
-        for(int icode=1; icode<=10; icode++){
-            String str= icode%2==0? "a":"r";
-            item = new CatalogItem(icode,str+"Item Name:"+icode,icode+100.2f, "Describe Item - "+icode);
+    private void tempAddCatalogItems() {
+        for (int icode = 1; icode <= 10; icode++) {
+            String str = icode % 2 == 0 ? "a" : "r";
+            item = new CatalogItem(icode, str + "Item Name:" + icode, icode + 100.2f, "Describe Item - " + icode);
             catalogItems.add(item);
+        }
+    }
+
+    private void tempAddEditOrderItem(){
+        OrderItem orderItem=null;
+        for(CatalogItem item: catalogItems){
+            orderItem = new OrderItem(item.getItemCode(), item.getItemName(), item.getItemPrice());
+            orderListItems.add(orderItem);
         }
     }
 

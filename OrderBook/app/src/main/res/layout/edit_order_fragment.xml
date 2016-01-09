@@ -19,7 +19,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:hint="@string/find_by_code"
-        android:id="@+id/editText"
+        android:id="@+id/edit_find_code"
         android:layout_alignBaseline="@+id/edit_search_button"
         android:layout_alignBottom="@+id/edit_search_button"
         android:layout_alignParentStart="true" />
@@ -34,7 +34,7 @@
         android:contentDescription="@string/search_by_code"
         android:background="@mipmap/ic_search"
         android:layout_below="@+id/txtEditOrderName"
-        android:layout_toEndOf="@+id/editText" />
+        android:layout_toEndOf="@+id/edit_find_code" />
 
 
     <Button
@@ -60,7 +60,7 @@
         android:id="@+id/txtEditItemName"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/edit_search_button"
-        android:layout_alignStart="@+id/editText"
+        android:layout_alignStart="@+id/edit_find_code"
         android:layout_toStartOf="@+id/edit_search_button"
         android:visibility="invisible" />
 

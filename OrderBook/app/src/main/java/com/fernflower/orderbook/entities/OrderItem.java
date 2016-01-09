@@ -41,6 +41,9 @@ public class OrderItem  extends Items{
     }
 
     public int getItemAmount() {
+       /* if(this.itemAmount==0){
+            this.itemAmount=1;
+        }*/
         return itemAmount;
     }
 
@@ -65,6 +68,6 @@ public class OrderItem  extends Items{
     }
 
     public float getItemFinalPrice() {
-        return itemFinalPrice;
+        return calculateFinalPrise(this.itemPrice, itemDiscount);
     }
 }
