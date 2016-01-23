@@ -13,33 +13,33 @@
         android:id="@+id/eoir_number"
         android:layout_width="10dp"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:text="@string/number_one" />
+        android:textSize="16sp"
+        android:text="@string/number_one"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/eoir_item_name"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="16sp"
+        android:layout_gravity="center_vertical"
         android:text="@string/row_catalog_item_name"
-         />
+        android:layout_marginLeft="3dp" />
 
 
-    <EditText
+    <TextView
         android:id="@+id/eoir_item_amount"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
         android:hint="@string/number_one"
-        android:textSize="14sp"
-        android:inputType="number"
+        android:textSize="16sp"
         android:gravity="right" />
 
-    <EditText
+    <TextView
         android:id="@+id/eoir_item_discount"
         android:layout_width="23dp"
         android:layout_height="wrap_content"
-        android:inputType="number|numberDecimal"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:hint="@string/number_zero"
         android:gravity="right" />
 
@@ -49,15 +49,16 @@
         android:layout_height="wrap_content"
         android:textSize="14sp"
         android:text="@string/percent_sign"
-         />
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/eoir_item_price"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:text="@string/number_one"
-        android:gravity="right" />
+        android:gravity="right"
+        android:layout_gravity="center_vertical" />
 
     <TextView
         android:id="@+id/eoir_currency_sign"
@@ -65,6 +66,6 @@
         android:layout_height="wrap_content"
         android:textSize="14sp"
         android:text="@string/currency_sign"
-        />
+        android:layout_gravity="center" />
     </TableRow>
 </TableLayout>

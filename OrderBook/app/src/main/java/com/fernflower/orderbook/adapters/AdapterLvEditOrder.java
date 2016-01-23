@@ -27,27 +27,29 @@ public class AdapterLvEditOrder extends ArrayAdapter<OrderItem> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder;
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(resource, parent, false);
 
-            ViewHolder holder = new ViewHolder();
+            holder = new ViewHolder();
             holder.itemNumber = (TextView) convertView.findViewById(R.id.eoir_number);
             holder.itemName = (TextView) convertView.findViewById(R.id.eoir_item_name);
-            holder.itemAmount = (EditText) convertView.findViewById(R.id.eoir_item_amount);
-            holder.itemDiscount = (EditText) convertView.findViewById(R.id.eoir_item_discount);
+            holder.itemAmount = (TextView) convertView.findViewById(R.id.eoir_item_amount);
+            holder.itemDiscount = (TextView) convertView.findViewById(R.id.eoir_item_discount);
             holder.itemPrice = (TextView) convertView.findViewById(R.id.eoir_item_price);
 
             convertView.setTag(holder);
-        } else {
-            ViewHolder holder=(ViewHolder) convertView.getTag();
-            OrderItem orderItem=getItem(position);
-            holder.itemNumber.setText(position+1);
-            holder.itemName.setText(orderItem.getItemName());
-            holder.itemAmount.setText(orderItem.getItemAmount());
-            holder.itemDiscount.setText(String.valueOf(orderItem.getItemDiscount()));
-            holder.itemPrice.setText(String.valueOf(orderItem.getItemFinalPrice()));
         }
+        holder = (ViewHolder) convertView.getTag();
+        OrderItem orderItem=getItem(position);
+        holder.itemNumber.setText(String.valueOf(position+1));
+        holder.itemName.setText(orderItem.getItemName());
+        String amount = (orderItem.getItemAmount()==0)? "":String.valueOf(orderItem.getItemAmount());
+        holder.itemAmount.setText(amount);
+        String discount = (orderItem.getItemDiscount()==0)? "":String.valueOf(orderItem.getItemDiscount());
+        holder.itemDiscount.setText(discount);
+        holder.itemPrice.setText(String.valueOf(orderItem.getItemFinalPrice()));
 
         return convertView;
     }
@@ -55,8 +57,8 @@ public class AdapterLvEditOrder extends ArrayAdapter<OrderItem> {
     static class ViewHolder {
         TextView itemNumber;
         TextView itemName;
-        EditText itemAmount;
-        EditText itemDiscount;
+        TextView itemAmount;
+        TextView itemDiscount;
         TextView itemPrice;
     }
 }
