@@ -90,4 +90,14 @@ public class StringHelper {
         return enteredListName;
     }
 
+    //Получить или текст или подсказку из EditText
+    public String getEditTextContent(EditText editText){
+        String result;
+        if(editText.getText()!=null && editText.getText().length()!=0){
+            result=editText.getText().toString();
+        }else{
+            result=editText.getHint().toString();
+        }
+        return result;
+    }
 }

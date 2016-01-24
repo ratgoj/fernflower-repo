@@ -94,11 +94,14 @@
     <string name="voice_no_choose_input">Please choose input and try again</string>
     <string name="no_listname_no_customername">You have not entered Order name or Customer name</string>
     <string name="no_data_from_inputs">Please, fill all input field.</string>
+    <string name="empty_search_by_code">Please, enter code of item and try again</string>
+    <string name="item_not_found">Sorry. Can\'t find any item by this code</string>
     <!--Error Message -->
     <string name="error_no_tables">Sorry.Can\'t found any tables, tableList.isEmpty()=true. Check DbLayer in - addTablesToList()</string>
     <string name="error_table_not_found">Sorry.Can\'t found this table. Check if Table Classes was initialized in addTablesToList()?</string>
-    <string name="error_voice_not_supported">Sorry.Yours device couldn\'t support voice input, or internet disconnected </string>
-
+    <string name="error_voice_not_supported">Sorry. Yours device couldn\'t support voice input, or internet disconnected </string>
+    <string name="error_code_is_not_number">Sorry. Your input value is not a number</string>
+    <string name="error_current_item_is_null">Sorry. Current item equal null</string>
     <!--Temp Strings -->
     <string name="row_orders_name">Order name</string>
     <string name="row_customers_name">Customer name</string>

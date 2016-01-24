@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.fernflower.orderbook.R;
@@ -42,14 +41,14 @@ public class AdapterLvEditOrder extends ArrayAdapter<OrderItem> {
             convertView.setTag(holder);
         }
         holder = (ViewHolder) convertView.getTag();
-        OrderItem orderItem=getItem(position);
-        holder.itemNumber.setText(String.valueOf(position+1));
+        OrderItem orderItem = getItem(position);
+        holder.itemNumber.setText(String.valueOf(position + 1));
         holder.itemName.setText(orderItem.getItemName());
-        String amount = (orderItem.getItemAmount()==0)? "":String.valueOf(orderItem.getItemAmount());
+        String amount = (orderItem.getItemAmount() == 0) ? "" : String.valueOf(orderItem.getItemAmount());
         holder.itemAmount.setText(amount);
-        String discount = (orderItem.getItemDiscount()==0)? "":String.valueOf(orderItem.getItemDiscount());
+        String discount = (orderItem.getItemDiscount() == 0) ? "" : String.valueOf(orderItem.getItemDiscount());
         holder.itemDiscount.setText(discount);
-        holder.itemPrice.setText(String.valueOf(orderItem.getItemFinalPrice()));
+        holder.itemPrice.setText(String.format("%.1f", orderItem.getItemFinalPrice()));
 
         return convertView;
     }

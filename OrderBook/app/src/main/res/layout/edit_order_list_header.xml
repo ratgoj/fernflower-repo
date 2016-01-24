@@ -34,14 +34,14 @@
 
         <TextView
             android:id="@+id/header_eoir_discount"
-            android:layout_width="20dp"
+            android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:text="@string/header_item_discount"
             android:textSize="12sp"/>
 
         <TextView
             android:id="@+id/header_eoir_price"
-            android:layout_width="wrap_content"
+            android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:text="@string/header_item_price"
             android:textSize="12sp"

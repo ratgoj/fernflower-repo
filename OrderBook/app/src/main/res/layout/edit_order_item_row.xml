@@ -11,15 +11,16 @@
     <TableRow>
     <TextView
         android:id="@+id/eoir_number"
-        android:layout_width="10dp"
+        android:layout_width="19dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:text="@string/number_one"
-        android:layout_gravity="center" />
+        android:text="100"
+        android:layout_gravity="center"
+        android:layout_marginLeft="2dp" />
 
     <TextView
         android:id="@+id/eoir_item_name"
-        android:layout_width="120dp"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:layout_gravity="center_vertical"
@@ -29,7 +30,7 @@
 
     <TextView
         android:id="@+id/eoir_item_amount"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:hint="@string/number_one"
         android:textSize="16sp"
@@ -37,7 +38,7 @@
 
     <TextView
         android:id="@+id/eoir_item_discount"
-        android:layout_width="23dp"
+        android:layout_width="35dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:hint="@string/number_zero"

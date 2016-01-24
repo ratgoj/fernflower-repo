@@ -16,20 +16,26 @@ public class OrderItem  extends Items{
         super.setItemCode(code);
         this.itemName = name;
         this.itemPrice = itemPrice;
+        this.itemAmount = 1;
         this.itemDiscount = 0;
-        this.itemFinalPrice = this.itemPrice;
+        this.itemFinalPrice = calculateThisFinalPrise();
     }
 
     public OrderItem(int code, String name, float itemPrice, float discount){
         super.setItemCode(code);
         this.itemName = name;
         this.itemPrice = itemPrice;
+        this.itemAmount = 1;
         this.itemDiscount = discount;
-        this.itemFinalPrice = calculateFinalPrise(this.itemPrice, this.itemDiscount);
+        this.itemFinalPrice = calculateThisFinalPrise();
     }
 
-    private float calculateFinalPrise(float price, float discount){
-        return price-(price*(discount/100));
+    private float calculateFinalPrise(float price, float discount, int amount){
+        return (price-(price*(discount/100)))*amount;
+    }
+
+    public float calculateThisFinalPrise(){
+        return calculateFinalPrise(this.itemPrice, this.itemDiscount, this.itemAmount);
     }
 
     public String getItemName() {
@@ -68,6 +74,8 @@ public class OrderItem  extends Items{
     }
 
     public float getItemFinalPrice() {
-        return calculateFinalPrise(this.itemPrice, itemDiscount);
+        this.itemFinalPrice = calculateThisFinalPrise();
+        return this.itemFinalPrice;
     }
+
 }
