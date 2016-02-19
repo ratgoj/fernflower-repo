@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/eoir_item_name"
-        android:layout_width="105dp"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:layout_gravity="center_vertical"
@@ -34,7 +34,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/number_one"
         android:textSize="16sp"
-        android:gravity="right" />
+        android:gravity="right"
+        android:layout_gravity="center_vertical" />
 
     <TextView
         android:id="@+id/eoir_item_discount"
@@ -42,11 +43,12 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:hint="@string/number_zero"
-        android:gravity="right" />
+        android:gravity="right"
+        android:layout_gravity="center_vertical" />
 
     <TextView
         android:id="@+id/eoir_percent_sign"
-        android:layout_width="wrap_content"
+        android:layout_width="3dp"
         android:layout_height="wrap_content"
         android:textSize="14sp"
         android:text="@string/percent_sign"
@@ -54,7 +56,7 @@
 
     <TextView
         android:id="@+id/eoir_item_price"
-        android:layout_width="45dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:text="@string/number_one"
@@ -63,7 +65,7 @@
 
     <TextView
         android:id="@+id/eoir_currency_sign"
-        android:layout_width="wrap_content"
+        android:layout_width="3dp"
         android:layout_height="wrap_content"
         android:textSize="14sp"
         android:text="@string/currency_sign"

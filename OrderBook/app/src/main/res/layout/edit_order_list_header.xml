@@ -37,7 +37,8 @@
             android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:text="@string/header_item_discount"
-            android:textSize="12sp"/>
+            android:textSize="12sp"
+            android:layout_marginLeft="7dp" />
 
         <TextView
             android:id="@+id/header_eoir_price"
